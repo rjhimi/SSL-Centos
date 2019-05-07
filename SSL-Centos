@@ -1,0 +1,4 @@
+yum install mod_ssl -y
+
+sed -i "s/^#SSLHonorCipherOrder.*$/SSLHonorCipherOrder on/g" /etc/httpd/conf.d/ssl.conf 
+systemctl restart httpd.service
